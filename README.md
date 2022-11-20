@@ -1,3 +1,17 @@
+# ReadmeDev App
+
+## Artigos e tutoriais de programação para Devs Pro
+
+Este é um projeto MVP fictício, criado para estudar React e autenticação com usuários bem como os seguintes tópicos:
+
+- React
+- React Hooks
+- TypeScript
+- axios
+- Session Storage
+- TSDX
+- Github Actions
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

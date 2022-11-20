@@ -1,0 +1,15 @@
+.rd-logo {
+  height: 2rem;
+}
+
+.rd-header {
+  color: white;
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.rd-header h1 {
+  margin-left: 1rem;
+}
