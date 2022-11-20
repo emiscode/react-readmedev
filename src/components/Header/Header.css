@@ -16,6 +16,12 @@
 .rd-logo h1 {
   color: #f2f2f7;
   margin-left: 0.5rem;
+  width: fit-content;
+  background-clip: text;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #66d4cf, #5e5ce6ff);
 }
 
 .rd-navbar {

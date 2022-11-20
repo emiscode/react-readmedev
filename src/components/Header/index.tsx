@@ -2,7 +2,8 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 import logo from "./assets/logo-min.svg";
-import usuario from "./assets/usuario.svg";
+import userIcon from "./assets/user-icon.svg";
+import loginIcon from "./assets/login-icon.svg";
 
 import ActionButton from "../ActionButton";
 
@@ -37,14 +38,14 @@ function Header() {
             <ActionButton
               text="Login"
               altSrc="Icone representando um usuário"
-              imgSrc={usuario}
+              imgSrc={loginIcon}
             />
           </li>
           <li>
             <ActionButton
               text="Cadastrar-se"
               altSrc="Icone representando um usuário"
-              imgSrc={usuario}
+              imgSrc={userIcon}
             />
           </li>
         </ul>
