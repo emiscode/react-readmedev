@@ -2,6 +2,9 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 import logo from "./assets/logo-min.svg";
+import usuario from "./assets/usuario.svg";
+
+import ActionButton from "../ActionButton";
 
 function Header() {
   return (
@@ -27,6 +30,22 @@ function Header() {
                 <Link to="/">DevOps</Link>
               </li>
             </ul>
+          </li>
+        </ul>
+        <ul className="rd-actions">
+          <li>
+            <ActionButton
+              text="Login"
+              altSrc="Icone representando um usuário"
+              imgSrc={usuario}
+            />
+          </li>
+          <li>
+            <ActionButton
+              text="Cadastrar-se"
+              altSrc="Icone representando um usuário"
+              imgSrc={usuario}
+            />
           </li>
         </ul>
       </nav>

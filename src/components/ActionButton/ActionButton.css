@@ -1,0 +1,13 @@
+.btn-nav {
+  border: none;
+  display: flex;
+  color: #aeaeb2;
+  cursor: pointer;
+  align-items: center;
+  background: transparent;
+  justify-content: space-around;
+}
+
+.btn-nav img {
+  margin-right: 12px;
+}
