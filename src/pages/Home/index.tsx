@@ -18,6 +18,7 @@ function Home() {
             placeholder={"O que você procura?"}
             value={search}
             onChange={setSearch}
+            shadowEffect={true}
           />
         </form>
       </Banner>
