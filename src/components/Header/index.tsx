@@ -1,7 +1,7 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-import logo from "./assets/logo-min.svg";
+import logo from "./assets/logo.svg";
 import userIcon from "./assets/user-icon.svg";
 import loginIcon from "./assets/login-icon.svg";
 
@@ -18,7 +18,7 @@ function Header() {
           </Link>
         </div>
         <ul className="rd-menu">
-          <li>
+          <li className="rd-menu-item-first">
             <a href="#!">Categorias</a>
             <ul className="rd-submenu">
               <li>
@@ -27,7 +27,7 @@ function Header() {
               <li>
                 <Link to="/">Back-end</Link>
               </li>
-              <li>
+              <li className="rd-submenu-item-last">
                 <Link to="/">DevOps</Link>
               </li>
             </ul>

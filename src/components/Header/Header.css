@@ -22,7 +22,7 @@
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #66d4cf, #5e5ce6ff);
+  background-image: linear-gradient(to right, #66d4cf, #aa64ff);
 }
 
 .rd-navbar {
@@ -42,7 +42,7 @@
 }
 
 .rd-navbar ul.rd-menu li {
-  padding: 10px;
+  padding: 1rem;
   color: #aeaeb2;
   position: relative;
   display: inline-block;
@@ -50,23 +50,32 @@
   text-transform: uppercase;
 }
 
-.rd-navbar ul.rd-menu li:hover {
-  color: #292929;
-  background: linear-gradient(to right, #66d4cf, #5e5ce6);
+.rd-navbar ul.rd-menu li.rd-menu-item-first {
+  border-radius: 1rem 1rem 0 0;
 }
 
-.rd-navbar ul.rd-submenu li {
-  min-width: 100%;
+.rd-navbar ul.rd-menu li:hover {
+  color: #292929;
+  background: linear-gradient(to right, #66d4cf, #aa64ff);
+}
+
+.rd-navbar ul.rd-submenu li.rd-submenu-item-last:hover {
+  border-radius: 0 0 1rem 1rem;
 }
 
 .rd-navbar .rd-submenu {
   left: 0;
-  top: 38px;
+  top: 3rem;
   padding: 0;
   display: none;
   position: absolute;
-  background-color: #2c2c2e;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #3a3a3c;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.rd-navbar ul.rd-submenu li {
+  min-width: 100%;
 }
 
 .rd-navbar ul li:hover .rd-submenu {

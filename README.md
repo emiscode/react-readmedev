@@ -1,6 +1,6 @@
 # ReadmeDev App
 
-## Tutoriais, artigos e livros de programação para Devs Pro
+## Livros e tutoriais de programação para Devs Pro.
 
 Este é um projeto MVP fictício, criado para estudar React e autenticação com usuários bem como os seguintes tópicos:
 
