@@ -15,6 +15,7 @@
 
 .rd-logo h1 {
   color: #f2f2f7;
+  font-size: 2rem;
   margin-left: 0.5rem;
   width: fit-content;
   background-clip: text;
@@ -27,6 +28,7 @@
 .rd-navbar {
   display: flex;
   align-items: center;
+  border-bottom: 2px solid #292929;
 }
 
 .rd-navbar ul li a {
@@ -36,6 +38,7 @@
 
 .rd-navbar ul.rd-menu {
   flex-grow: 1;
+  margin-top: 1.5rem;
 }
 
 .rd-navbar ul.rd-menu li {
@@ -44,6 +47,7 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 .rd-navbar ul.rd-menu li:hover {

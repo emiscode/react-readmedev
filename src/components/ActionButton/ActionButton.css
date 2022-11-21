@@ -1,11 +1,16 @@
 .btn-nav {
   border: none;
   display: flex;
+  font-size: 1rem;
   color: #aeaeb2;
   cursor: pointer;
   align-items: center;
   background: transparent;
   justify-content: space-around;
+}
+
+.btn-nav:hover {
+  color: #d1d1d6;
 }
 
 .btn-nav img {
