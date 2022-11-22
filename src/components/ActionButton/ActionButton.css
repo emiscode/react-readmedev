@@ -2,7 +2,7 @@
   border: none;
   display: flex;
   font-size: 1rem;
-  color: #aeaeb2;
+  color: #ccd6f6;
   cursor: pointer;
   align-items: center;
   background: transparent;
@@ -10,7 +10,7 @@
 }
 
 .btn-nav:hover {
-  color: #d1d1d6;
+  color: #64ffda;
 }
 
 .btn-nav img {

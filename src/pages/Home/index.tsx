@@ -3,6 +3,9 @@ import "./Home.css";
 import { useState } from "react";
 import { RdInput } from "readmedev-ds";
 import Banner from "../../components/Banner";
+import Title from "../../components/Title";
+import { latestBooks } from "../../data/latestBooks";
+import BooksFeatured from "../../components/BooksFeatured";
 
 function Home() {
   const [search, setSearch] = useState("");
@@ -22,6 +25,8 @@ function Home() {
           />
         </form>
       </Banner>
+      <Title text="Novidades" />
+      <BooksFeatured books={latestBooks} />
     </section>
   );
 }

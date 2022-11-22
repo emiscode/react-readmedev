@@ -10,7 +10,7 @@ interface BannerProps {
 
 function Banner({ title, subtitle, children }: BannerProps) {
   return (
-    <section className="banner-container" style={{ background: "#8862aa" }}>
+    <section className="banner-container" style={{ background: "#0a192f" }}>
       <h2>{title}</h2>
       <h3>{subtitle}</h3>
       {children}

@@ -10,25 +10,20 @@
 }
 
 .rd-logo img {
-  height: 3rem;
+  height: 2rem;
 }
 
 .rd-logo h1 {
-  color: #f2f2f7;
+  color: #64ffda;
   font-size: 2rem;
   margin-left: 0.5rem;
-  width: fit-content;
-  background-clip: text;
-  background-size: cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #66d4cf, #aa64ff);
 }
 
 .rd-navbar {
   display: flex;
+  padding: 0 8rem;
   align-items: center;
-  border-bottom: 2px solid #292929;
+  border-bottom: 2px solid #64ffda;
 }
 
 .rd-navbar ul li a {
@@ -43,7 +38,7 @@
 
 .rd-navbar ul.rd-menu li {
   padding: 1rem;
-  color: #aeaeb2;
+  color: #ccd6f6;
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -55,8 +50,8 @@
 }
 
 .rd-navbar ul.rd-menu li:hover {
-  color: #292929;
-  background: linear-gradient(to right, #66d4cf, #aa64ff);
+  color: #0a192f;
+  background-color: #64ffda;
 }
 
 .rd-navbar ul.rd-submenu li.rd-submenu-item-last:hover {
@@ -84,7 +79,7 @@
 
 .rd-navbar ul.rd-actions li {
   padding: 10px;
-  color: #aeaeb2;
+  color: #ccd6f6;
   position: relative;
   display: inline-block;
   box-sizing: border-box;
