@@ -13,6 +13,7 @@ Este é um projeto MVP fictício, criado para estudar React e autenticação com
 - Github Actions
 
 ![Tela principal](public/images/screenshots/tela-1.png)
+![Tela mais lidos](public/images/screenshots/tela-2.png)
 
 ## Getting Started with Create React App
 
