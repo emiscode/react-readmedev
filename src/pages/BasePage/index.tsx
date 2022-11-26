@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 const BasePage = () => {
@@ -6,6 +7,7 @@ const BasePage = () => {
     <main>
       <Header />
       <Outlet />
+      <Footer />
     </main>
   );
 };

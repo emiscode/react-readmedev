@@ -1,9 +1,9 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 
-import logo from "./assets/logo.svg";
-import userIcon from "./assets/user-icon.svg";
-import loginIcon from "./assets/login-icon.svg";
+import logo from "../../assets/logo.svg";
+import userIcon from "../../assets/user-icon.svg";
+import loginIcon from "../../assets/login-icon.svg";
 
 import ActionButton from "../ActionButton";
 

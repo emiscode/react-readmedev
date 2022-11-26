@@ -1,0 +1,40 @@
+.link-footer {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.rd-logo-footer {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.rd-logo-footer img {
+  height: 2rem;
+}
+
+.rd-logo-footer h1 {
+  color: #64ffda;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.rd-navbar-footer {
+  display: flex;
+  padding: 0 8rem;
+  align-items: center;
+}
+
+.rd-navbar-footer ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rd-navbar-footer ul.rd-copyright li {
+  padding: 10px;
+  color: #ccd6f6;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+}
