@@ -12,6 +12,8 @@ Este é um projeto MVP fictício, criado para estudar React e autenticação com
 - TSDX
 - Github Actions
 
+![Tela principal](public/images/screenshots/tela-1.png)
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

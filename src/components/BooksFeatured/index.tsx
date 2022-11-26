@@ -31,30 +31,32 @@ const BooksFeatured = ({ books }: BooksFeaturedProps) => {
           })}
         </ul>
       </div>
-      <RdCard>
-        <div className="selecionado-detalhes">
-          <header>
-            <h5>Sobre o livro:</h5>
-          </header>
-          <h6>{selected.name}</h6>
-          <p>{selected.description}</p>
-          <p>Por: {selected.author}</p>
-          <footer>
-            <div className="price">
-              <em>A partir de: </em>
-              <strong>
-                {Intl.NumberFormat("pt-br", {
-                  style: "currency",
-                  currency: "BRL",
-                }).format(selected.price)}
-              </strong>
-            </div>
-            <div>
-              <RdButton text="Comprar" />
-            </div>
-          </footer>
-        </div>
-      </RdCard>
+      <div className="container-rd-card">
+        <RdCard>
+          <div className="selected-details">
+            <header>
+              <h5>Sobre o livro:</h5>
+            </header>
+            <h6>{selected.name}</h6>
+            <p>{selected.description}</p>
+            <p>Por: {selected.author}</p>
+            <footer>
+              <div className="price">
+                <em>A partir de: </em>
+                <strong>
+                  {Intl.NumberFormat("pt-br", {
+                    style: "currency",
+                    currency: "BRL",
+                  }).format(selected.price)}
+                </strong>
+              </div>
+              <div>
+                <RdButton text="Comprar" />
+              </div>
+            </footer>
+          </div>
+        </RdCard>
+      </div>
     </section>
   );
 };
