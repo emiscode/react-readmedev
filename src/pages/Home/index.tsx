@@ -8,6 +8,7 @@ import { latestBooks } from "../../data/latestBooks";
 import { bestSellers } from "../../data/bestSellers";
 
 import BooksFeatured from "../../components/BooksFeatured";
+import SearchTags from "../../components/SearchTags";
 
 function Home() {
   const [search, setSearch] = useState("");
@@ -31,6 +32,7 @@ function Home() {
       <BooksFeatured books={latestBooks} />
       <Title text="Mais Lidos" />
       <BooksFeatured books={bestSellers} />
+      <SearchTags />
     </section>
   );
 }

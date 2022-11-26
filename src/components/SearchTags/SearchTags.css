@@ -1,0 +1,24 @@
+.search-tags {
+  padding: 64px 0;
+  background: #112240;
+}
+
+.search-tags h4 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #64ffda;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.search-tags .container {
+  width: 900px;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 12px;
+}
