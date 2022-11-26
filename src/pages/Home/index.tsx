@@ -5,6 +5,8 @@ import { RdInput } from "readmedev-ds";
 import Banner from "../../components/Banner";
 import Title from "../../components/Title";
 import { latestBooks } from "../../data/latestBooks";
+import { bestSellers } from "../../data/bestSellers";
+
 import BooksFeatured from "../../components/BooksFeatured";
 
 function Home() {
@@ -27,6 +29,8 @@ function Home() {
       </Banner>
       <Title text="Novidades" />
       <BooksFeatured books={latestBooks} />
+      <Title text="Mais Lidos" />
+      <BooksFeatured books={bestSellers} />
     </section>
   );
 }
