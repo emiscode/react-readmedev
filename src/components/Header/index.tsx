@@ -48,7 +48,7 @@ function Header() {
               altSrc="Icone representando um usuário"
               imgSrc={userIcon}
             />
-            <ModalNewUser />
+            <ModalNewUser open={true} onClose={() => {}} />
           </li>
         </ul>
       </nav>

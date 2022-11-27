@@ -1,10 +1,15 @@
 import "./ModalNewUser.css";
 
 import { RdButton, RdInput, RdModal } from "readmedev-ds";
-import loginImage from "./assets/login.png";
 import { useState } from "react";
+import axios from "axios";
 
-const ModalNewUser = () => {
+interface PropsModalNewUser {
+  open: boolean;
+  onClose: () => void;
+}
+
+const ModalNewUser = ({ open, onClose }: PropsModalNewUser) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
@@ -13,10 +18,39 @@ const ModalNewUser = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const onSubmitForm = (evento: React.FormEvent<HTMLFormElement>) => {
+    evento.preventDefault();
+    const usuario = {
+      nome: name,
+      email: email,
+      senha: password,
+      endereco: address,
+      cep: cep,
+      complemento: addressPlus,
+    };
+
+    axios
+      .post("http://localhost:8000/public/registrar", usuario)
+      .then(() => {
+        alert("Usuário cadastrado com sucesso!");
+        setName("");
+        setEmail("");
+        setAddress("");
+        setAddressPlus("");
+        setCep("");
+        setPassword("");
+        setConfirmPassword("");
+        onClose();
+      })
+      .catch(() => {
+        alert("OPS! Alguma coisa deu errado!");
+      });
+  };
+
   return (
-    <RdModal title="Cadastro de Usuário" open={false} onClose={() => {}}>
+    <RdModal title="Cadastro de Usuário" open={open} onClose={() => {}}>
       <div className="container-modal">
-        <form action="">
+        <form onSubmit={onSubmitForm}>
           <RdInput
             label="Nome"
             value={name}
