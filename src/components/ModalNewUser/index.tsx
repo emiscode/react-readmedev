@@ -14,7 +14,7 @@ const ModalNewUser = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
-    <RdModal title="Cadastro de Usuário" open={true} onClose={() => {}}>
+    <RdModal title="Cadastro de Usuário" open={false} onClose={() => {}}>
       <div className="container-modal">
         <form action="">
           <RdInput
