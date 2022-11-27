@@ -1,0 +1,36 @@
+.container-modal {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.container-modal form {
+  max-width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+  padding-right: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #0a192f;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #153140;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #153140;
+}
+
+.container-modal footer {
+  margin-top: 40px;
+  text-align: center;
+}
