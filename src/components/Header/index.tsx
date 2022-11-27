@@ -6,6 +6,7 @@ import userIcon from "../../assets/user-icon.svg";
 import loginIcon from "../../assets/login-icon.svg";
 
 import ActionButton from "../ActionButton";
+import ModalNewUser from "../ModalNewUser";
 
 function Header() {
   return (
@@ -47,6 +48,7 @@ function Header() {
               altSrc="Icone representando um usuário"
               imgSrc={userIcon}
             />
+            <ModalNewUser />
           </li>
         </ul>
       </nav>
