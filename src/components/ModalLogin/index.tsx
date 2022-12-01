@@ -27,14 +27,18 @@ const ModalLogin = ({
 
     axios
       .post("http://localhost:8000/public/login", usuario)
-      .then(() => {
-        alert("Usuário autenticado com sucesso!");
+      .then((response) => {
+        sessionStorage.setItem("token", response.data.access_token);
         setEmail("");
         setPassword("");
         onClose();
       })
-      .catch(() => {
-        alert("OPS! Alguma coisa deu errado!");
+      .catch((err) => {
+        if (err?.response?.data?.message) {
+          alert(err?.response?.data?.message);
+        } else {
+          alert("OPS! Alguma coisa deu errado!");
+        }
       });
   };
 
