@@ -3,6 +3,7 @@ import "./ModalLogin.css";
 import { RdButton, RdInput, RdModal } from "readmedev-ds";
 import { useState } from "react";
 import axios from "axios";
+import { useSaveToken } from "../../hooks/token";
 
 interface PropsModalLogin {
   open: boolean;
@@ -17,6 +18,7 @@ const ModalLogin = ({
 }: PropsModalLogin) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const setToken = useSaveToken();
 
   const onSubmitForm = (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
@@ -28,7 +30,7 @@ const ModalLogin = ({
     axios
       .post("http://localhost:8000/public/login", usuario)
       .then((response) => {
-        sessionStorage.setItem("token", response.data.access_token);
+        setToken(response.data.access_token);
         setEmail("");
         setPassword("");
         onClose();
