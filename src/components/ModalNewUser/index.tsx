@@ -48,7 +48,7 @@ const ModalNewUser = ({ open, onClose }: PropsModalNewUser) => {
   };
 
   return (
-    <RdModal title="Cadastro de Usuário" open={open} onClose={() => {}}>
+    <RdModal title="Cadastro de Usuário" open={open} onClose={onClose}>
       <div className="container-modal">
         <form onSubmit={onSubmitForm}>
           <RdInput

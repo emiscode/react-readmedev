@@ -7,8 +7,13 @@ import loginIcon from "../../assets/login-icon.svg";
 
 import ActionButton from "../ActionButton";
 import ModalNewUser from "../ModalNewUser";
+import { useState } from "react";
+import ModalLogin from "../ModalLogin";
 
 function Header() {
+  const [modalNewUserOpen, setModalNewUserOpen] = useState(false);
+  const [modalLoginOpen, setModalLoginOpen] = useState(false);
+
   return (
     <header>
       <nav className="rd-navbar">
@@ -40,6 +45,12 @@ function Header() {
               text="Login"
               altSrc="Icone representando um usuário"
               imgSrc={loginIcon}
+              onClick={() => setModalLoginOpen(true)}
+            />
+            <ModalLogin
+              open={modalLoginOpen}
+              onClose={() => setModalLoginOpen(false)}
+              fallbackModalNewUser={() => setModalNewUserOpen(true)}
             />
           </li>
           <li>
@@ -47,8 +58,12 @@ function Header() {
               text="Cadastrar-se"
               altSrc="Icone representando um usuário"
               imgSrc={userIcon}
+              onClick={() => setModalNewUserOpen(true)}
             />
-            <ModalNewUser open={true} onClose={() => {}} />
+            <ModalNewUser
+              open={modalNewUserOpen}
+              onClose={() => setModalNewUserOpen(false)}
+            />
           </li>
         </ul>
       </nav>

@@ -1,0 +1,36 @@
+.container-modal-login {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.container-modal-login form {
+  max-width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+  padding-right: 1rem;
+}
+
+.container-modal-login form::-webkit-scrollbar {
+  width: 0rem;
+}
+
+.container-modal-login footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.container-register {
+  display: flex;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 2px solid #153140;
+}
+
+.container-register span {
+  font-weight: 700;
+  color: #112240;
+}
