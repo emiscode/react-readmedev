@@ -8,12 +8,14 @@ import { useSaveToken } from "../../hooks/token";
 interface PropsModalLogin {
   open: boolean;
   onClose: () => void;
+  onLogin: () => void;
   fallbackModalNewUser: () => void;
 }
 
 const ModalLogin = ({
   open,
   onClose,
+  onLogin,
   fallbackModalNewUser,
 }: PropsModalLogin) => {
   const [email, setEmail] = useState("");
@@ -33,7 +35,7 @@ const ModalLogin = ({
         setToken(response.data.access_token);
         setEmail("");
         setPassword("");
-        onClose();
+        onLogin();
       })
       .catch((err) => {
         if (err?.response?.data?.message) {

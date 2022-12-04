@@ -9,10 +9,19 @@ import ActionButton from "../ActionButton";
 import ModalNewUser from "../ModalNewUser";
 import { useState } from "react";
 import ModalLogin from "../ModalLogin";
+import { useGetToken } from "../../hooks/token";
 
 function Header() {
   const [modalNewUserOpen, setModalNewUserOpen] = useState(false);
   const [modalLoginOpen, setModalLoginOpen] = useState(false);
+  const token = useGetToken();
+
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(token != null);
+
+  const onLogin = () => {
+    setIsUserLoggedIn(true);
+    setModalLoginOpen(false);
+  };
 
   return (
     <header>
@@ -40,31 +49,43 @@ function Header() {
           </li>
         </ul>
         <ul className="rd-actions">
-          <li>
-            <ActionButton
-              text="Login"
-              altSrc="Icone representando um usuário"
-              imgSrc={loginIcon}
-              onClick={() => setModalLoginOpen(true)}
-            />
-            <ModalLogin
-              open={modalLoginOpen}
-              onClose={() => setModalLoginOpen(false)}
-              fallbackModalNewUser={() => setModalNewUserOpen(true)}
-            />
-          </li>
-          <li>
-            <ActionButton
-              text="Cadastrar-se"
-              altSrc="Icone representando um usuário"
-              imgSrc={userIcon}
-              onClick={() => setModalNewUserOpen(true)}
-            />
-            <ModalNewUser
-              open={modalNewUserOpen}
-              onClose={() => setModalNewUserOpen(false)}
-            />
-          </li>
+          {!isUserLoggedIn && (
+            <>
+              <li>
+                <ActionButton
+                  text="Login"
+                  altSrc="Icone representando um usuário"
+                  imgSrc={loginIcon}
+                  onClick={() => setModalLoginOpen(true)}
+                />
+                <ModalLogin
+                  open={modalLoginOpen}
+                  onClose={() => setModalLoginOpen(false)}
+                  onLogin={onLogin}
+                  fallbackModalNewUser={() => setModalNewUserOpen(true)}
+                />
+              </li>
+              <li>
+                <ActionButton
+                  text="Cadastrar-se"
+                  altSrc="Icone representando um usuário"
+                  imgSrc={userIcon}
+                  onClick={() => setModalNewUserOpen(true)}
+                />
+                <ModalNewUser
+                  open={modalNewUserOpen}
+                  onClose={() => setModalNewUserOpen(false)}
+                />
+              </li>
+            </>
+          )}
+          {isUserLoggedIn && (
+            <>
+              <li>
+                <Link to="/minha-conta/pedidos">Minha conta</Link>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </header>
