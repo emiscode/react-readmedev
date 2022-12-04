@@ -8,18 +8,26 @@ const LoggedArea = () => {
       <Title text="Minha Conta" />
       <section className="logged_area__container">
         <div className="logged_area__menu">
-          <ul className="logged-area__nav">
+          <ul className="logged_area__nav">
             <li>
-              <Link to="/area-logada/pedidos">Pedidos</Link>
+              <Link to="/area-logada/pedidos" className="logged_area__link">
+                Pedidos
+              </Link>
             </li>
             <li>
-              <Link to="/area-logada/trocas">Trocas</Link>
+              <Link to="/area-logada/trocas" className="logged_area__link">
+                Trocas
+              </Link>
             </li>
             <li>
-              <Link to="/area-logada/cupons">Cupons</Link>
+              <Link to="/area-logada/cupons" className="logged_area__link">
+                Cupons
+              </Link>
             </li>
             <li>
-              <Link to="/area-logada/dados">Seus dados</Link>
+              <Link to="/area-logada/dados" className="logged_area__link">
+                Seus dados
+              </Link>
             </li>
           </ul>
         </div>

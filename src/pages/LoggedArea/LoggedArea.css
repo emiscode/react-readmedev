@@ -1,4 +1,33 @@
 .logged_area__container {
   display: flex;
-  padding: 0 8rem;
+  margin-top: 2rem;
+  padding: 0 16rem;
+}
+
+.logged_area__content {
+  width: 100%;
+  margin-left: 8rem;
+}
+
+.logged_area__menu ul {
+  padding: 0;
+}
+
+.logged_area__menu ul li {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #112240;
+  border-bottom: 1px solid #8892b0;
+}
+
+.logged_area__menu ul li:hover {
+  color: #64ffda;
+  cursor: pointer;
+}
+
+.logged_area__menu ul li .logged_area__link {
+  color: inherit;
+  text-decoration: none;
 }

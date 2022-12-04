@@ -6,7 +6,7 @@ import ActionButton from "../ActionButton";
 
 function Footer() {
   return (
-    <header>
+    <footer>
       <nav className="rd-navbar-footer">
         <div className="rd-logo-footer">
           <Link to="/" className="link-footer">
@@ -24,7 +24,7 @@ function Footer() {
           </li>
         </ul>
       </nav>
-    </header>
+    </footer>
   );
 }
 

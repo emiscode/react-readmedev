@@ -38,3 +38,10 @@
   display: inline-block;
   box-sizing: border-box;
 }
+
+footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-color: #112240;
+}
