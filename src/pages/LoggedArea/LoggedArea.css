@@ -1,6 +1,7 @@
 .logged_area__container {
   display: flex;
   margin-top: 2rem;
+  margin-bottom: 4rem;
   padding: 0 16rem;
 }
 

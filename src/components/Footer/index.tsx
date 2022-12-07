@@ -6,7 +6,7 @@ import ActionButton from "../ActionButton";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="main-footer">
       <nav className="rd-navbar-footer">
         <div className="rd-logo-footer">
           <Link to="/" className="link-footer">
