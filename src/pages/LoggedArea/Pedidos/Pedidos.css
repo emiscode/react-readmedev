@@ -2,7 +2,7 @@
   color: #f2f2f7;
 }
 
-.pedido_container {
+.pedido-container {
   padding: 1rem;
   display: flex;
   align-items: flex-end;
@@ -10,11 +10,11 @@
   border-bottom: 1px solid #8892b0;
 }
 
-.pedido_container ul {
+.pedido-container ul {
   margin: 0;
   padding: 0;
 }
 
-.pedido_container ul li {
+.pedido-container ul li {
   padding: 0.3rem;
 }
