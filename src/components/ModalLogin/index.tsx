@@ -2,8 +2,8 @@ import "./ModalLogin.css";
 
 import { RdButton, RdInput, RdModal } from "readmedev-ds";
 import { useState } from "react";
-import axios from "axios";
 import { useSaveToken } from "../../hooks/token";
+import api from "../../lib/axios";
 
 interface PropsModalLogin {
   open: boolean;
@@ -29,8 +29,8 @@ const ModalLogin = ({
       senha: password,
     };
 
-    axios
-      .post("http://localhost:8000/public/login", usuario)
+    api()
+      .post("public/login", usuario)
       .then((response) => {
         setToken(response.data.access_token);
         setEmail("");

@@ -1,7 +1,10 @@
+import { useEffect } from "react";
 import { RdButton } from "readmedev-ds";
 import "./Pedidos.css";
 
 const Pedidos = () => {
+  useEffect(() => {}, []);
+
   return (
     <section className="pedidos">
       <h1>Meus pedidos</h1>

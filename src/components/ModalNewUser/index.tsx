@@ -3,6 +3,8 @@ import "./ModalNewUser.css";
 import { RdButton, RdInput, RdModal } from "readmedev-ds";
 import { useState } from "react";
 import axios from "axios";
+import env from "react-dotenv";
+import api from "../../lib/axios";
 
 interface PropsModalNewUser {
   open: boolean;
@@ -29,8 +31,8 @@ const ModalNewUser = ({ open, onClose }: PropsModalNewUser) => {
       complemento: addressPlus,
     };
 
-    axios
-      .post("http://localhost:8000/public/registrar", usuario)
+    api()
+      .post("public/registrar", usuario)
       .then(() => {
         alert("Usuário cadastrado com sucesso!");
         setName("");
