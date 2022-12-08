@@ -25,6 +25,19 @@ const Pedidos = () => {
       });
   }, [token]);
 
+  const remove = (pedido: IPedido) => {
+    api(token)
+      .delete(`pedidos/${pedido.id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then(() => {
+        setPedidos(pedidos.filter((p) => p.id !== pedido.id));
+      })
+      .catch((erro) => console.log(erro));
+  };
+
   return (
     <section className="pedidos">
       <h1>Meus pedidos</h1>
@@ -45,6 +58,11 @@ const Pedidos = () => {
             <li>
               Entrega realizada em :{" "}
               <strong>{new Date(pedido.entrega).toLocaleDateString()}</strong>
+            </li>
+            <li>
+              <button className="btn-remove" onClick={() => remove(pedido)}>
+                Excluir
+              </button>
             </li>
           </ul>
           <RdButton text="Detalhes" />
