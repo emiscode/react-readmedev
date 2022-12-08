@@ -14,6 +14,7 @@ Este é um projeto MVP fictício, criado para estudar React e autenticação com
 
 ![Tela principal](public/images/screenshots/tela-1.png)
 ![Tela mais lidos](public/images/screenshots/tela-2.png)
+![Tela área logada de pedidos](public/images/screenshots/tela-3.png)
 
 ## Getting Started with Create React App
 
