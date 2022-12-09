@@ -1,5 +1,5 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from "../../assets/logo.svg";
 import userIcon from "../../assets/user-icon.svg";
@@ -15,12 +15,19 @@ function Header() {
   const [modalNewUserOpen, setModalNewUserOpen] = useState(false);
   const [modalLoginOpen, setModalLoginOpen] = useState(false);
   const token = useGetToken();
+  const navigate = useNavigate();
 
   const [isUserLoggedIn, setIsUserLoggedIn] = useState<boolean>(token != null);
 
   const onLogin = () => {
     setIsUserLoggedIn(true);
     setModalLoginOpen(false);
+  };
+
+  const onLogout = () => {
+    setIsUserLoggedIn(false);
+    sessionStorage.removeItem("token");
+    navigate("/");
   };
 
   return (
@@ -83,6 +90,14 @@ function Header() {
             <>
               <li>
                 <Link to="/minha-conta/pedidos">Minha conta</Link>
+              </li>
+              <li>
+                <ActionButton
+                  text="Sair"
+                  altSrc="Icone representando um usuário"
+                  imgSrc={userIcon}
+                  onClick={() => onLogout()}
+                />
               </li>
             </>
           )}

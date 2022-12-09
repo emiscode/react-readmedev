@@ -1,8 +1,19 @@
-import { Link, Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import Title from "../../components/Title";
+import { useGetToken } from "../../hooks/token";
 import "./LoggedArea.css";
 
 const LoggedArea = () => {
+  const token = useGetToken();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (token === null) {
+      navigate("/");
+    }
+  }, [token, navigate]);
+
   return (
     <>
       <Title text="Minha Conta" />
